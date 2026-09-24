@@ -1,7 +1,7 @@
 {
-  "name": "Terminal Portfolio by SN",
-  "short_name": "Terminal",
-  "description": "Sat Naing's terminal portfolio website coded with ReactJS.",
+  "name": "奉昌炜的终端作品集",
+  "short_name": "FCW",
+  "description": "奉昌炜的终端风格个人作品集：大数据与 AI 开发方向。",
   "start_url": "/",
   "icons": [
     {

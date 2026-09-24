@@ -38,9 +38,6 @@ export const PreNameMobile = styled.pre`
 `;
 
 export const PreImg = styled.pre`
-  font-size: 0.625rem;
-  line-height: 1.25;
-
   @media (max-width: 550px) {
     display: none;
   }

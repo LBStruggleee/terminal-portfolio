@@ -9,6 +9,7 @@ import {
 } from "../../utils/funcs";
 import { termContext } from "../Terminal";
 import Usage from "../Usage";
+import { socials } from "../../content/socials";
 
 const Socials: React.FC = () => {
   const { arg, history, rerender } = useContext(termContext);
@@ -27,7 +28,11 @@ const Socials: React.FC = () => {
 
   /* ===== check arg is valid ===== */
   const checkArg = () =>
-    isArgInvalid(arg, "go", ["1", "2", "3", "4"]) ? (
+    isArgInvalid(
+      arg,
+      "go",
+      socials.map(({ id }) => String(id))
+    ) ? (
       <Usage cmd="socials" />
     ) : null;
 
@@ -47,32 +52,5 @@ const Socials: React.FC = () => {
     </HelpWrapper>
   );
 };
-
-const socials = [
-  {
-    id: 1,
-    title: "GitHub",
-    url: "https://github.com/satnaing",
-    tab: 3,
-  },
-  {
-    id: 2,
-    title: "Dev.to",
-    url: "https://dev.to/satnaing",
-    tab: 3,
-  },
-  {
-    id: 3,
-    title: "Facebook",
-    url: "https://www.facebook.com/satnaing.dev",
-    tab: 1,
-  },
-  {
-    id: 4,
-    title: "Instagram",
-    url: "https://instagram.com/satnaing.dev",
-    tab: 0,
-  },
-];
 
 export default Socials;

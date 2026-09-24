@@ -3,12 +3,14 @@ import Clear from "./commands/Clear";
 import Echo from "./commands/Echo";
 import Education from "./commands/Education";
 import Email from "./commands/Email";
+import Experience from "./commands/Experience";
 import GeneralOutput from "./commands/GeneralOutput";
 import Gui from "./commands/Gui";
 import Help from "./commands/Help";
 import Welcome from "./commands/Welcome";
 import History from "./commands/History";
 import Projects from "./commands/Projects";
+import Skills from "./commands/Skills";
 import Socials from "./commands/Socials";
 import Themes from "./commands/Themes";
 import { OutputContainer, UsageDiv } from "./styles/Output.styled";
@@ -39,11 +41,13 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           echo: <Echo />,
           education: <Education />,
           email: <Email />,
+          experience: <Experience />,
           gui: <Gui />,
           help: <Help />,
           history: <History />,
           projects: <Projects />,
-          pwd: <GeneralOutput>/home/satnaing</GeneralOutput>,
+          pwd: <GeneralOutput>/home/fcw</GeneralOutput>,
+          skills: <Skills />,
           socials: <Socials />,
           themes: <Themes />,
           welcome: <Welcome />,

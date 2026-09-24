@@ -54,10 +54,10 @@ describe("Terminal Component", () => {
       );
     });
 
-    it("should return '/home/satnaing' when user type 'pwd' cmd", async () => {
+    it("should return '/home/fcw' when user type 'pwd' cmd", async () => {
       await user.type(terminalInput, "pwd{enter}");
       expect(screen.getByTestId("latest-output").firstChild?.textContent).toBe(
-        "/home/satnaing"
+        "/home/fcw"
       );
     });
 
@@ -150,11 +150,11 @@ describe("Terminal Component", () => {
       await user.type(terminalInput, "email{enter}");
       expect(window.open).toHaveBeenCalled();
       expect(screen.getByTestId("latest-output").firstChild?.textContent).toBe(
-        "contact@satnaing.dev"
+        "718508219@qq.com"
       );
     });
 
-    const nums = [1, 2, 3, 4];
+    const nums = [1, 2];
     nums.forEach(num => {
       it(`should redirect to project URL when user type 'projects go ${num}' cmd`, async () => {
         await user.type(terminalInput, `projects go ${num}{enter}`);
@@ -162,7 +162,8 @@ describe("Terminal Component", () => {
       });
     });
 
-    nums.forEach(num => {
+    const socialNums = [1, 2, 3, 4];
+    socialNums.forEach(num => {
       it(`should redirect to social media when user type 'socials go ${num}' cmd`, async () => {
         await user.type(terminalInput, `socials go ${num}{enter}`);
         expect(window.open).toHaveBeenCalled();
@@ -202,7 +203,7 @@ describe("Terminal Component", () => {
         window.open = vi.fn();
 
         // firstly run commands correct options
-        await user.type(terminalInput, `projects go 4{enter}`);
+        await user.type(terminalInput, `projects go 2{enter}`);
         await user.type(terminalInput, `socials go 4{enter}`);
         await user.type(terminalInput, `themes set espresso{enter}`);
 
